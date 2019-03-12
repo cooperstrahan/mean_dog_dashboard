@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dog Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .push {
+        margin: 2.5% auto;
+        width: 30%;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/dogs/new">New Pup</a>
+    </nav>
+    <div class='push'>
+        <h1><%= that_dog.name %></h1>
+        <ul>
+            <li>Rating: <%= that_dog.rating %>/10</li>
+            <li>Description: <%= that_dog.description %></li>
+            <li>ID: <%= that_dog.id %></li>
+        </ul>
+        <a href='edit/<%= that_dog.id %>'><button class="btn btn-primary">Update</button></a>
+        <a href='delete/<%= that_dog.id %>'><button class="btn btn-danger">Delete</button></a>
+    </div>
+</body>
+</html>
